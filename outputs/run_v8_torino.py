@@ -87,12 +87,18 @@ def build_pqk_circuit(n_qubits: int, n_layers: int):
     return qc, params
 
 
-def build_observables(n_qubits: int) -> list:
-    """Z_q and X_q for every qubit — 2*n_qubits operators total."""
+def build_observables(n_qubits: int, layout=None, total_qubits: int = None) -> list:
+    """Z_q and X_q for every qubit — 2*n_qubits operators total.
+    If layout is provided, apply_layout maps logical → physical qubit space."""
     ops = []
     for q in range(n_qubits):
-        ops.append(SparsePauliOp("I" * (n_qubits - q - 1) + "Z" + "I" * q))
-        ops.append(SparsePauliOp("I" * (n_qubits - q - 1) + "X" + "I" * q))
+        z_op = SparsePauliOp("I" * (n_qubits - q - 1) + "Z" + "I" * q)
+        x_op = SparsePauliOp("I" * (n_qubits - q - 1) + "X" + "I" * q)
+        if layout is not None:
+            z_op = z_op.apply_layout(layout, num_qubits=total_qubits)
+            x_op = x_op.apply_layout(layout, num_qubits=total_qubits)
+        ops.append(z_op)
+        ops.append(x_op)
     return ops
 
 
@@ -237,14 +243,13 @@ def main():
     qc_t = pm.run(qc)
     print(f"  Transpiled— depth: {qc_t.depth()}  gates: {qc_t.size()}")
 
-    observables = build_observables(N_QUBITS)
-    print(f"  Observables: {len(observables)} (Z+X for each qubit)")
+    observables = build_observables(N_QUBITS, layout=qc_t.layout, total_qubits=backend.num_qubits)
+    print(f"  Observables: {len(observables)} (Z+X per qubit, mapped to {backend.num_qubits}-qubit space)")
 
     # ── Estimator with error mitigation ──────────────────────────────────
     print("\n[3] Setting up Estimator (resilience_level=1)...")
     options = EstimatorOptions()
     options.resilience_level = 1          # readout error mitigation + DD
-    options.optimization_level = 1
     estimator = Estimator(mode=backend, options=options)
 
     # ── Run seeds ────────────────────────────────────────────────────────
