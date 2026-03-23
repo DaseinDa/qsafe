@@ -1,0 +1,267 @@
+{
+  "experiment": "Q-SAFE v7 Statevector Simulation",
+  "n_qubits": 8,
+  "n_layers": 3,
+  "seeds": [
+    42,
+    7,
+    13,
+    99,
+    2025
+  ],
+  "summary": [
+    {
+      "method": "PQK-OCSVM",
+      "roc_auc_mean": 0.80274,
+      "roc_auc_std": 0.03358836703384073,
+      "ap_mean": 0.8050056799342358,
+      "ap_std": 0.03328806977626027
+    },
+    {
+      "method": "PQK-IF",
+      "roc_auc_mean": 0.76984,
+      "roc_auc_std": 0.044616570912610475,
+      "ap_mean": 0.7019561585375358,
+      "ap_std": 0.054578831708836845
+    },
+    {
+      "method": "PQK-Maha",
+      "roc_auc_mean": 0.78758,
+      "roc_auc_std": 0.03144585187270333,
+      "ap_mean": 0.7601882058434566,
+      "ap_std": 0.04605582052904095
+    },
+    {
+      "method": "QKernel-OCSVM",
+      "roc_auc_mean": 0.6997199999999999,
+      "roc_auc_std": 0.04406156601847006,
+      "ap_mean": 0.6541543731906577,
+      "ap_std": 0.06524198031968177
+    },
+    {
+      "method": "Classical-IF",
+      "roc_auc_mean": 0.56676,
+      "roc_auc_std": 0.05429746218747243,
+      "ap_mean": 0.5481201699926556,
+      "ap_std": 0.048012467901586246
+    },
+    {
+      "method": "Classical-OCSVM",
+      "roc_auc_mean": 0.32502000000000003,
+      "roc_auc_std": 0.03356989127179295,
+      "ap_mean": 0.42889059905098215,
+      "ap_std": 0.023818172787006917
+    },
+    {
+      "method": "LOF",
+      "roc_auc_mean": 0.8186399999999999,
+      "roc_auc_std": 0.019894984292529623,
+      "ap_mean": 0.8102497132985377,
+      "ap_std": 0.04871425883356531
+    },
+    {
+      "method": "Mahalanobis",
+      "roc_auc_mean": 0.47684,
+      "roc_auc_std": 0.06535033588283995,
+      "ap_mean": 0.49415600467763354,
+      "ap_std": 0.044403477488862156
+    }
+  ],
+  "per_seed": [
+    {
+      "seed": 42,
+      "t_feat": 3.774190902709961,
+      "t_kernel": 3.998108148574829,
+      "results": {
+        "PQK-OCSVM": {
+          "roc_auc": 0.8484999999999999,
+          "avg_precision": 0.85507250589217
+        },
+        "PQK-IF": {
+          "roc_auc": 0.8123,
+          "avg_precision": 0.7252919582935327
+        },
+        "PQK-Maha": {
+          "roc_auc": 0.7908999999999999,
+          "avg_precision": 0.7741996147733224
+        },
+        "QKernel-OCSVM": {
+          "roc_auc": 0.6709,
+          "avg_precision": 0.6053755993686882
+        },
+        "Classical-IF": {
+          "roc_auc": 0.5652,
+          "avg_precision": 0.5322707693105744
+        },
+        "Classical-OCSVM": {
+          "roc_auc": 0.3172,
+          "avg_precision": 0.42016900237119126
+        },
+        "LOF": {
+          "roc_auc": 0.8411,
+          "avg_precision": 0.8516810834232698
+        },
+        "Mahalanobis": {
+          "roc_auc": 0.47809999999999997,
+          "avg_precision": 0.4645079675824547
+        }
+      }
+    },
+    {
+      "seed": 7,
+      "t_feat": 3.8777778148651123,
+      "t_kernel": 3.9487602710723877,
+      "results": {
+        "PQK-OCSVM": {
+          "roc_auc": 0.8177,
+          "avg_precision": 0.7833008126500691
+        },
+        "PQK-IF": {
+          "roc_auc": 0.7543,
+          "avg_precision": 0.6516755656828512
+        },
+        "PQK-Maha": {
+          "roc_auc": 0.7329,
+          "avg_precision": 0.6810646906491132
+        },
+        "QKernel-OCSVM": {
+          "roc_auc": 0.6455000000000001,
+          "avg_precision": 0.5753602786300133
+        },
+        "Classical-IF": {
+          "roc_auc": 0.4826,
+          "avg_precision": 0.47138292199902965
+        },
+        "Classical-OCSVM": {
+          "roc_auc": 0.28,
+          "avg_precision": 0.3868682988724269
+        },
+        "LOF": {
+          "roc_auc": 0.7896,
+          "avg_precision": 0.7300944235436181
+        },
+        "Mahalanobis": {
+          "roc_auc": 0.3862,
+          "avg_precision": 0.42780473190589013
+        }
+      }
+    },
+    {
+      "seed": 13,
+      "t_feat": 4.102349758148193,
+      "t_kernel": 4.1272711753845215,
+      "results": {
+        "PQK-OCSVM": {
+          "roc_auc": 0.7742,
+          "avg_precision": 0.7763812032302042
+        },
+        "PQK-IF": {
+          "roc_auc": 0.7108,
+          "avg_precision": 0.664099155448947
+        },
+        "PQK-Maha": {
+          "roc_auc": 0.7827,
+          "avg_precision": 0.7397331862391319
+        },
+        "QKernel-OCSVM": {
+          "roc_auc": 0.7298,
+          "avg_precision": 0.7198392568923069
+        },
+        "Classical-IF": {
+          "roc_auc": 0.5424,
+          "avg_precision": 0.5633151289949545
+        },
+        "Classical-OCSVM": {
+          "roc_auc": 0.3078,
+          "avg_precision": 0.43775961899027144
+        },
+        "LOF": {
+          "roc_auc": 0.8251999999999999,
+          "avg_precision": 0.8577427173774022
+        },
+        "Mahalanobis": {
+          "roc_auc": 0.42310000000000003,
+          "avg_precision": 0.4952538015529342
+        }
+      }
+    },
+    {
+      "seed": 99,
+      "t_feat": 3.912904739379883,
+      "t_kernel": 3.9042346477508545,
+      "results": {
+        "PQK-OCSVM": {
+          "roc_auc": 0.7551,
+          "avg_precision": 0.7756132662663938
+        },
+        "PQK-IF": {
+          "roc_auc": 0.7417,
+          "avg_precision": 0.6699802063352834
+        },
+        "PQK-Maha": {
+          "roc_auc": 0.8027,
+          "avg_precision": 0.7970739537430461
+        },
+        "QKernel-OCSVM": {
+          "roc_auc": 0.6836,
+          "avg_precision": 0.628242685972598
+        },
+        "Classical-IF": {
+          "roc_auc": 0.6441999999999999,
+          "avg_precision": 0.6196835751590658
+        },
+        "Classical-OCSVM": {
+          "roc_auc": 0.38,
+          "avg_precision": 0.4542537939679115
+        },
+        "LOF": {
+          "roc_auc": 0.8015,
+          "avg_precision": 0.7791263200803616
+        },
+        "Mahalanobis": {
+          "roc_auc": 0.5502,
+          "avg_precision": 0.5355862619639462
+        }
+      }
+    },
+    {
+      "seed": 2025,
+      "t_feat": 3.789729356765747,
+      "t_kernel": 4.003056526184082,
+      "results": {
+        "PQK-OCSVM": {
+          "roc_auc": 0.8182,
+          "avg_precision": 0.8346606116323414
+        },
+        "PQK-IF": {
+          "roc_auc": 0.8301,
+          "avg_precision": 0.7987339069270648
+        },
+        "PQK-Maha": {
+          "roc_auc": 0.8287,
+          "avg_precision": 0.8088695838126694
+        },
+        "QKernel-OCSVM": {
+          "roc_auc": 0.7687999999999999,
+          "avg_precision": 0.7419540450896822
+        },
+        "Classical-IF": {
+          "roc_auc": 0.5994,
+          "avg_precision": 0.5539484544996532
+        },
+        "Classical-OCSVM": {
+          "roc_auc": 0.34010000000000007,
+          "avg_precision": 0.4454022810531096
+        },
+        "LOF": {
+          "roc_auc": 0.8358000000000001,
+          "avg_precision": 0.8326040220680362
+        },
+        "Mahalanobis": {
+          "roc_auc": 0.5466,
+          "avg_precision": 0.5476272603829427
+        }
+      }
+    }
+  ]
+}
