@@ -1,0 +1,112 @@
+{
+  "experiment": "Q-SAFE v8 IBM Torino Hardware",
+  "backend": "ibm_torino",
+  "n_qubits": 16,
+  "n_layers": 2,
+  "circuit_depth_original": 258,
+  "circuit_depth_transpiled": 206,
+  "seeds": [
+    42,
+    7
+  ],
+  "n_train": 50,
+  "n_test": 60,
+  "summary": [
+    {
+      "method": "PQK-OCSVM",
+      "roc_auc_mean": 0.6483333333333333,
+      "roc_auc_std": 0.07500000000000007,
+      "ap_mean": 0.6400694011398856,
+      "ap_std": 0.07142477097219968
+    },
+    {
+      "method": "PQK-IF",
+      "roc_auc_mean": 0.653888888888889,
+      "roc_auc_std": 0.004999999999999949,
+      "ap_mean": 0.615148666715225,
+      "ap_std": 0.020803934274592928
+    },
+    {
+      "method": "PQK-Maha",
+      "roc_auc_mean": 0.7155555555555555,
+      "roc_auc_std": 0.04444444444444445,
+      "ap_mean": 0.7108842242672965,
+      "ap_std": 0.04093848273568623
+    },
+    {
+      "method": "PQK-LOF",
+      "roc_auc_mean": 0.6377777777777778,
+      "roc_auc_std": 0.013333333333333308,
+      "ap_mean": 0.6374385444824329,
+      "ap_std": 0.05163104586316275
+    }
+  ],
+  "per_seed": [
+    {
+      "seed": 42,
+      "job_ids": {
+        "train": "d70asm469uic73ck4iag",
+        "test": "d70att469uic73ck4jhg"
+      },
+      "results": {
+        "PQK-OCSVM": {
+          "roc_auc": 0.5733333333333333,
+          "avg_precision": 0.568644630167686
+        },
+        "PQK-IF": {
+          "roc_auc": 0.6588888888888889,
+          "avg_precision": 0.594344732440632
+        },
+        "PQK-Maha": {
+          "roc_auc": 0.6711111111111111,
+          "avg_precision": 0.6699457415316102
+        },
+        "PQK-LOF": {
+          "roc_auc": 0.6244444444444445,
+          "avg_precision": 0.5858074986192701
+        }
+      },
+      "F_train_shape": [
+        50,
+        32
+      ],
+      "F_test_shape": [
+        60,
+        32
+      ]
+    },
+    {
+      "seed": 7,
+      "job_ids": {
+        "train": "d70avb8v5rlc73f5qvb0",
+        "test": "d70b0i8v5rlc73f5r0i0"
+      },
+      "results": {
+        "PQK-OCSVM": {
+          "roc_auc": 0.7233333333333334,
+          "avg_precision": 0.7114941721120853
+        },
+        "PQK-IF": {
+          "roc_auc": 0.648888888888889,
+          "avg_precision": 0.6359526009898179
+        },
+        "PQK-Maha": {
+          "roc_auc": 0.76,
+          "avg_precision": 0.7518227070029827
+        },
+        "PQK-LOF": {
+          "roc_auc": 0.6511111111111111,
+          "avg_precision": 0.6890695903455956
+        }
+      },
+      "F_train_shape": [
+        50,
+        32
+      ],
+      "F_test_shape": [
+        60,
+        32
+      ]
+    }
+  ]
+}
